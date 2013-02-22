@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<content>
+    <entry type="1">
+        <textMessage JMSCorrelationID="ID:EMS-SERVER.D6C492B562871B68:10" JMSDeliveryMode="2" JMSExpiration="0" JMSMessageID="ID:EMS-DEV1.14D24D23A4E03083:17" JMSPriority="4" JMSRedelivered="true" JMSTimestamp="1298340234232">
+            <headerProperty name="IR2NP_MessageVersion"/>
+            <headerProperty name="MF_MessageVersion"/>
+            <headerProperty name="MF_RetryDestName" type="java.lang.String" value="MFQueue"/>
+            <headerProperty name="MF_OriginalMessageID" type="java.lang.String" value="ID:EMS-DEV1.14D24D23A4E03082:6"/>
+            <headerProperty name="MF_ExceptionInfo" type="java.lang.String" value="abc exception"/>
+            <headerProperty name="MF_MessageTimeToLive" type="java.lang.Long" value="0"/>
+            <headerProperty name="MF_SenderDestName" type="java.lang.String" value="MFQueue"/>
+            <headerProperty name="IR2NP_RetryDestName" type="java.lang.String" value="MFQueue"/>
+            <headerProperty name="MF_RootElement" type="java.lang.String" value="TestRoot"/>
+            <headerProperty name="MF_SenderCFName" type="java.lang.String" value="MessageFrameworkPoolCF"/>
+            <headerProperty name="IR2NP_SenderCFName" type="java.lang.String" value="MessageFrameworkPoolCF"/>
+            <headerProperty name="IR2NP_REQUEST_ID"/>
+            <headerProperty name="IR2NP_MessageType" type="java.lang.String" value="TestRoot"/>
+            <headerProperty name="MF_Request_ID"/>
+            <headerProperty name="IR2NP_MessageTimeToLive" type="java.lang.Long" value="0"/>
+            <headerProperty name="IR2NP_SenderDestName" type="java.lang.String" value="MFQueue"/>
+            <headerProperty name="IR2NP_AppNamespace" type="java.lang.String" value="TestNameSpace"/>
+            <headerProperty name="IR2NP_OriginalMessageID" type="java.lang.String" value="ID:EMS-DEV1.14D24D23A4E03082:6"/>
+            <headerProperty name="MF_AppNamespace" type="java.lang.String" value="TestNameSpace"/>
+            <text>MF '"\Console test message.</text>
+        </textMessage>
+    </entry>
+</content>
+
