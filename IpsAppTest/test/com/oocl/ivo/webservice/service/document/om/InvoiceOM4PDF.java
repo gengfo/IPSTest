@@ -15,14 +15,23 @@ public class InvoiceOM4PDF {
         invoice.setColOffice(ServiceOfficeOM4PDF.buildServiceOffice());
         invoice.setInvoicee(InvoiceeOM4PDF.buildInvoicee());
         invoice.setPayableBy("gengfo");
-        
-        List<Shipment> shipments = new ArrayList<Shipment>();
-        shipments.add(ShipmentOM4PDF.buildShipment());
-        
-        invoice.setShipments(shipments);
+        populateShipment(invoice);
+        populateAmount(invoice);
 
         return invoice;
 
+    }
+
+    public static void populateShipment(Invoice invoice) {
+
+        List<Shipment> shipments = new ArrayList<Shipment>();
+        shipments.add(ShipmentOM4PDF.buildShipment());
+        invoice.setShipments(shipments);
+
+    }
+
+    public static void populateAmount(Invoice invoice) {
+        invoice.setAmount(MoneyOM4PDF.buildMoney());
     }
 
 }
