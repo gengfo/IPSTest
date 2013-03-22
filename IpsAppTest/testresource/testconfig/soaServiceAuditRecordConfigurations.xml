@@ -1,0 +1,9 @@
+<Component>
+
+    <subcomponent name="soaDefaultAuditRecordConfig" class="com.oocl.csc.frm.bsf.service.audit.impl.FWServiceAuditRecordConfigComponent">
+	  	<var name="LOG_ENABLED" value="true" />
+  		<var name="ENABLED" value="true" />
+  		<var name="LOGGER_NAME" value="soaLogger"/>
+    </subcomponent> 
+    
+</Component>

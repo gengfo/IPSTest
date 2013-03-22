@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sender:senderConfig xmlns:sender="http://www.oocl.com/frm/mif/sender"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.oocl.com/frm/mif/mifSender.xsd">
+
+	<!-- sender:messages ***************** start -->
+	<sender:messages>
+
+		<sender:message type="StatusFeedback">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.ivo.webservice.service.message.mif.sender.convertor.OrderEntryStatusV1Convertor">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+		
+		<!-- R2.7-->
+		<sender:message type="StatusFeedback2">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.frm.mif.sender.converter.impl.EmptySenderConverter">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+
+		<sender:message type="ARAPAcknowledge">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.ivo.webservice.service.message.mif.sender.convertor.AcknowledgeV1Convertor">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+		
+		<sender:message type="CPAcknowledge">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.ivo.webservice.service.message.mif.sender.convertor.AcknowledgeFolderV1Convertor">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+
+		<sender:message type="ChargeCodeUpdate">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.ivo.webservice.service.message.mif.sender.convertor.ChargeCodeEntryV1Convertor">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+
+		<sender:message type="ServiceProviderUpdate">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.ivo.webservice.service.message.mif.sender.convertor.ServiceProviderEntryV1Convertor">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+			<sender:version value="ver2.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.ivo.webservice.service.message.mif.sender.convertor.ServiceProviderEntryV2Convertor">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+		
+		<!-- in R2.10 -->
+		<sender:message type="InvoiceeUpdate">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.ivo.webservice.service.message.mif.sender.convertor.InvoiceeV1Convertor">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+		
+		<!-- in R2.10 -->
+		<sender:message type="ICSInvoiceUpdateFeedback">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.frm.mif.sender.converter.impl.EmptySenderConverter">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+		
+		<!-- in R2.10 -->
+		<sender:message type="ICSInvoiceACK">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.frm.mif.sender.converter.impl.EmptySenderConverter">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+		
+		<!--in R2.5-->		
+		<sender:message type="JobCostAck">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.frm.mif.sender.converter.impl.EmptySenderConverter">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+		
+		<!-- R2.14 -->
+
+		<sender:message type="RevenueProvisionAck">
+			<sender:version value="ver1.0">
+				<sender:apps>
+					<sender:app id="IPS">
+						<sender:converter
+							class="com.oocl.frm.mif.sender.converter.impl.EmptySenderConverter">
+						</sender:converter>
+					</sender:app>
+				</sender:apps>
+			</sender:version>
+		</sender:message>
+
+
+	</sender:messages>
+
+	<sender:destinations>
+
+		<sender:destination id="ChargeCodeTopic">
+			<sender:messages>
+				<sender:message type="ChargeCodeUpdate">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.CHGCODE">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+		<sender:destination id="ServiceProviderTopic">
+			<sender:messages>
+				<sender:message type="ServiceProviderUpdate">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.SPCODE">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+					<sender:version value="ver2.0">
+						<sender:decorators>
+							<sender:decorator refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.SPCODE">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+		<!-- in R2.10 -->
+		<sender:destination id="InvoiceeTopic">
+			<sender:messages>
+				<sender:message type="InvoiceeUpdate">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.INVOICEE">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+		<!-- in R2.10 -->
+		<sender:destination id="ICSInvoiceUpdateFeedbackTopic">
+			<sender:messages>
+				<sender:message type="ICSInvoiceUpdateFeedback">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.ICSSTATUSFBK">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+		<!-- in R2.10 -->
+		<sender:destination id="ICSInvoiceACKTopic">
+			<sender:messages>
+				<sender:message type="ICSInvoiceACK">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.REQUEST.INVOICE_ACK.TPC">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+
+		<sender:destination id="ARAPAcknowledgeQueue">
+			<sender:messages>
+				<sender:message type="ARAPAcknowledge">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.ARAPACK_TMS">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+		<sender:destination id="CPAcknowledgeQueue">
+			<sender:messages>
+				<sender:message type="CPAcknowledge">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.CPACK_TMS">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+
+
+		<!-- for DCS, TMS, SPS-->
+		<sender:destination id="StatusFeedbackTopic">
+			<sender:messages>
+				<sender:message type="StatusFeedback">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.FBKSTATUS">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+		<!-- R2.7-->
+		<!-- for ICS Only-->
+		<sender:destination id="StatusFeedbackTopic2">
+			<sender:messages>
+				<sender:message type="StatusFeedback2">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.SEND.JOBCOST.FBKSTATUS.TPC">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+		<!--in R2.5 R2.7-->
+		<sender:destination id="JobCostAckTopic">
+			<sender:messages>
+				<sender:message type="JobCostAck">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.RESPONSE.ACK.TPC">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+		<!-- in R2.14 -->
+		<sender:destination id="RevenueProvisionAckTopic">
+			<sender:messages>
+				<sender:message type="RevenueProvisionAck">
+					<sender:version value="ver1.0">
+						<sender:decorators>
+							<sender:decorator
+								refId="jaxbXmlBeansJmsDecrator" />
+						</sender:decorators>
+						<sender:transporter
+							class="com.oocl.frm.mif.mf.sender.transporter.MFJMSSenderTransporterWithDefault">
+							<sender:params>
+								<sender:param key="destinationName"
+									value="RS.IPS.RESPONSE.REV_PROVISION.TPC">
+								</sender:param>
+							</sender:params>
+						</sender:transporter>
+					</sender:version>
+				</sender:message>
+			</sender:messages>
+		</sender:destination>
+		
+	</sender:destinations>
+
+	<!-- sender:destinations ***************** end -->
+
+	<!-- sender:decorator ***************** start -->
+	
+	<sender:decorator id="jaxbXmlBeansJmsDecrator"
+		class="com.oocl.ivo.webservice.service.message.mif.sender.decorators.DirectedJAXBXMLBeansToMFJmsSenderDecorator">
+	</sender:decorator>
+	
+	<!-- sender:decorator ***************** end -->
+	
+</sender:senderConfig>

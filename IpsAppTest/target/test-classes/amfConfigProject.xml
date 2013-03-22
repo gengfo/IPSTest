@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toplink:object-persistence version="Oracle TopLink - 10g Release 3 (10.1.3.1.0) (Build 061004)" xmlns:opm="http://xmlns.oracle.com/ias/xsds/opm" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:toplink="http://xmlns.oracle.com/ias/xsds/toplink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <opm:name>amfConfigProject</opm:name>
+   <opm:class-mapping-descriptors>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.AmfSystemImpl</opm:class>
+         <opm:alias>AmfSystemImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_Application</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.ApplicationTypeImpl</toplink:reference-class>
+               <toplink:field name="application" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_JndiProperties</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.JndiPropertiesTypeImpl</toplink:reference-class>
+               <toplink:field name="jndi-properties" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_Receiver</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgReceiverImpl</toplink:reference-class>
+               <toplink:field name="receiver" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_Sender</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgSenderImpl</toplink:reference-class>
+               <toplink:field name="sender" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:default-root-element>amf-system</toplink:default-root-element>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/amf-system</toplink:schema-context>
+            <toplink:node-type>element</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.AmfSystemTypeImpl</opm:class>
+         <opm:alias>AmfSystemTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_Application</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.ApplicationTypeImpl</toplink:reference-class>
+               <toplink:field name="application" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_JndiProperties</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.JndiPropertiesTypeImpl</toplink:reference-class>
+               <toplink:field name="jndi-properties" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_Receiver</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgReceiverImpl</toplink:reference-class>
+               <toplink:field name="receiver" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_Sender</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgSenderImpl</toplink:reference-class>
+               <toplink:field name="sender" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/amfSystemType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.ApplicationTypeImpl</opm:class>
+         <opm:alias>ApplicationTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_ApplicationName</opm:attribute-name>
+               <opm:get-method>getApplicationName</opm:get-method>
+               <opm:set-method>setApplicationName</opm:set-method>
+               <opm:field name="application-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_HostName</opm:attribute-name>
+               <opm:get-method>getHostName</opm:get-method>
+               <opm:set-method>setHostName</opm:set-method>
+               <opm:field name="host-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_PortNumber</opm:attribute-name>
+               <opm:get-method>getPortNumber</opm:get-method>
+               <opm:set-method>setPortNumber</opm:set-method>
+               <opm:field name="port-number/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/applicationType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.DestBrokerTypeImpl</opm:class>
+         <opm:alias>DestBrokerTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_MsgDestName</opm:attribute-name>
+               <opm:get-method>getMsgDestName</opm:get-method>
+               <opm:set-method>setMsgDestName</opm:set-method>
+               <opm:field name="msg-dest-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_DefaultDestBrokerClassName</opm:attribute-name>
+               <opm:get-method>getDefaultDestBrokerClassName</opm:get-method>
+               <opm:set-method>setDefaultDestBrokerClassName</opm:set-method>
+               <opm:field name="default-dest-broker-class-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-collection-mapping">
+               <opm:attribute-name>_MsgTypeBroker</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgBrokerTypeImpl</toplink:reference-class>
+               <toplink:field name="msg-type-broker" xsi:type="toplink:node"/>
+               <toplink:container xsi:type="toplink:list-container-policy">
+                  <toplink:collection-type>java.util.Vector</toplink:collection-type>
+               </toplink:container>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/destBrokerType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.JndiPropertiesTypeImpl</opm:class>
+         <opm:alias>JndiPropertiesTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_JavaNamingFactoryInitial</opm:attribute-name>
+               <opm:get-method>getJavaNamingFactoryInitial</opm:get-method>
+               <opm:set-method>setJavaNamingFactoryInitial</opm:set-method>
+               <opm:field name="java.naming.factory.initial/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_JavaNamingProviderUrl</opm:attribute-name>
+               <opm:get-method>getJavaNamingProviderUrl</opm:get-method>
+               <opm:set-method>setJavaNamingProviderUrl</opm:set-method>
+               <opm:field name="java.naming.provider.url/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_JavaNamingSecurityPrincipal</opm:attribute-name>
+               <opm:get-method>getJavaNamingSecurityPrincipal</opm:get-method>
+               <opm:set-method>setJavaNamingSecurityPrincipal</opm:set-method>
+               <opm:field name="java.naming.security.principal/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_JavaNamingSecurityCredentials</opm:attribute-name>
+               <opm:get-method>getJavaNamingSecurityCredentials</opm:get-method>
+               <opm:set-method>setJavaNamingSecurityCredentials</opm:set-method>
+               <opm:field name="java.naming.security.credentials/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/jndiPropertiesType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MessageTypeEntityImpl</opm:class>
+         <opm:alias>MessageTypeEntityImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_MsgTypeName</opm:attribute-name>
+               <opm:get-method>getMsgTypeName</opm:get-method>
+               <opm:set-method>setMsgTypeName</opm:set-method>
+               <opm:field name="msg-type-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_RootElement</opm:attribute-name>
+               <opm:get-method>getRootElement</opm:get-method>
+               <opm:set-method>setRootElement</opm:set-method>
+               <opm:field name="root-element/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_NameSpace</opm:attribute-name>
+               <opm:get-method>getNameSpace</opm:get-method>
+               <opm:set-method>setNameSpace</opm:set-method>
+               <opm:field name="name-space/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/messageTypeEntity</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgBrokersMappingTypeImpl</opm:class>
+         <opm:alias>MsgBrokersMappingTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-collection-mapping">
+               <opm:attribute-name>_DestBroker</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.DestBrokerTypeImpl</toplink:reference-class>
+               <toplink:field name="dest-broker" xsi:type="toplink:node"/>
+               <toplink:container xsi:type="toplink:list-container-policy">
+                  <toplink:collection-type>java.util.Vector</toplink:collection-type>
+               </toplink:container>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/msgBrokersMappingType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgBrokerTypeImpl</opm:class>
+         <opm:alias>MsgBrokerTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_TypeBrokerClassName</opm:attribute-name>
+               <opm:get-method>getTypeBrokerClassName</opm:get-method>
+               <opm:set-method>setTypeBrokerClassName</opm:set-method>
+               <opm:field name="type-broker-class-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-collection-mapping">
+               <opm:attribute-name>_MessageType</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MessageTypeEntityImpl</toplink:reference-class>
+               <toplink:field name="messageType" xsi:type="toplink:node"/>
+               <toplink:container xsi:type="toplink:list-container-policy">
+                  <toplink:collection-type>java.util.Vector</toplink:collection-type>
+               </toplink:container>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/msgBrokerType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgReceiverDestinationsMappingTypeImpl</opm:class>
+         <opm:alias>MsgReceiverDestinationsMappingTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-collection-mapping">
+               <opm:attribute-name>_MsgDestination</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgReceiverDestinationTypeImpl</toplink:reference-class>
+               <toplink:field name="msg-destination" xsi:type="toplink:node"/>
+               <toplink:container xsi:type="toplink:list-container-policy">
+                  <toplink:collection-type>java.util.Vector</toplink:collection-type>
+               </toplink:container>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/msgReceiverDestinationsMappingType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgReceiverDestinationTypeImpl</opm:class>
+         <opm:alias>MsgReceiverDestinationTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_DestName</opm:attribute-name>
+               <opm:get-method>getDestName</opm:get-method>
+               <opm:set-method>setDestName</opm:set-method>
+               <opm:field name="dest-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_ConnectionFactory</opm:attribute-name>
+               <opm:get-method>getConnectionFactory</opm:get-method>
+               <opm:set-method>setConnectionFactory</opm:set-method>
+               <opm:field name="connection-factory/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_NumberDestinationInstances</opm:attribute-name>
+               <opm:get-method>getNumberDestinationInstances</opm:get-method>
+               <opm:set-method>setNumberDestinationInstances</opm:set-method>
+               <opm:field name="number-destination-instances/text()" xsi:type="toplink:node"/>
+               <opm:null-value xsi:type="xsd:integer">1</opm:null-value>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_Queue</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.QueueDestinationTypeImpl</toplink:reference-class>
+               <toplink:field name="queue" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_Topic</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.TopicDestinationTypeImpl</toplink:reference-class>
+               <toplink:field name="topic" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/msgReceiverDestinationType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgReceiverImpl</opm:class>
+         <opm:alias>MsgReceiverImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_MsgDestinations</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgReceiverDestinationsMappingTypeImpl</toplink:reference-class>
+               <toplink:field name="msg-destinations" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_MsgBrokers</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgBrokersMappingTypeImpl</toplink:reference-class>
+               <toplink:field name="msg-brokers" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/msgReceiver</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgSenderDestinationsMappingTypeImpl</opm:class>
+         <opm:alias>MsgSenderDestinationsMappingTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-collection-mapping">
+               <opm:attribute-name>_MsgDestination</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgSenderDestinationTypeImpl</toplink:reference-class>
+               <toplink:field name="msg-destination" xsi:type="toplink:node"/>
+               <toplink:container xsi:type="toplink:list-container-policy">
+                  <toplink:collection-type>java.util.Vector</toplink:collection-type>
+               </toplink:container>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/msgSenderDestinationsMappingType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgSenderDestinationTypeImpl</opm:class>
+         <opm:alias>MsgSenderDestinationTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_DestName</opm:attribute-name>
+               <opm:get-method>getDestName</opm:get-method>
+               <opm:set-method>setDestName</opm:set-method>
+               <opm:field name="dest-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_IsQueue</opm:attribute-name>
+               <opm:get-method>getIsQueue</opm:get-method>
+               <opm:set-method>setIsQueue</opm:set-method>
+               <opm:field name="isQueue/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_ConnectionFactory</opm:attribute-name>
+               <opm:get-method>getConnectionFactory</opm:get-method>
+               <opm:set-method>setConnectionFactory</opm:set-method>
+               <opm:field name="connection-factory/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/msgSenderDestinationType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgSenderImpl</opm:class>
+         <opm:alias>MsgSenderImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-composite-object-mapping">
+               <opm:attribute-name>_MsgDestinations</opm:attribute-name>
+               <toplink:reference-class>com.oocl.frm.messaging.configuration.jaxb.impl.MsgSenderDestinationsMappingTypeImpl</toplink:reference-class>
+               <toplink:field name="msg-destinations" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/msgSender</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.QueueDestinationTypeImpl</opm:class>
+         <opm:alias>QueueDestinationTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_MaxRetryCount</opm:attribute-name>
+               <opm:get-method>getMaxRetryCount</opm:get-method>
+               <opm:set-method>setMaxRetryCount</opm:set-method>
+               <opm:field name="max-retry-count/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_DestExceptionQueueName</opm:attribute-name>
+               <opm:get-method>getDestExceptionQueueName</opm:get-method>
+               <opm:set-method>setDestExceptionQueueName</opm:set-method>
+               <opm:field name="dest-exception-queue-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_DestRecoveryQueueName</opm:attribute-name>
+               <opm:get-method>getDestRecoveryQueueName</opm:get-method>
+               <opm:set-method>setDestRecoveryQueueName</opm:set-method>
+               <opm:field name="dest-recovery-queue-name/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_NumberRecoveryInstances</opm:attribute-name>
+               <opm:get-method>getNumberRecoveryInstances</opm:get-method>
+               <opm:set-method>setNumberRecoveryInstances</opm:set-method>
+               <opm:field name="number-recovery-instances/text()" xsi:type="toplink:node"/>
+               <opm:null-value xsi:type="xsd:integer">1</opm:null-value>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/QueueDestinationType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.configuration.jaxb.impl.TopicDestinationTypeImpl</opm:class>
+         <opm:alias>TopicDestinationTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_IsDurableSubscriber</opm:attribute-name>
+               <opm:get-method>getIsDurableSubscriber</opm:get-method>
+               <opm:set-method>setIsDurableSubscriber</opm:set-method>
+               <opm:field name="isDurableSubscriber/text()" xsi:type="toplink:node"/>
+               <opm:null-value xsi:type="xsd:string">false</opm:null-value>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_DurableSubscriberName</opm:attribute-name>
+               <opm:get-method>getDurableSubscriberName</opm:get-method>
+               <opm:set-method>setDurableSubscriberName</opm:set-method>
+               <opm:field name="durableSubscriberName/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_DurableClientId</opm:attribute-name>
+               <opm:get-method>getDurableClientId</opm:get-method>
+               <opm:set-method>setDurableClientId</opm:set-method>
+               <opm:field name="durableClientId/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/amfConfigProject.xsd</toplink:resource>
+            <toplink:schema-context>/TopicDestinationType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+   </opm:class-mapping-descriptors>
+   <toplink:login xsi:type="toplink:xml-login">
+      <toplink:platform-class>oracle.toplink.ox.platform.SAXPlatform</toplink:platform-class>
+      <toplink:user-name></toplink:user-name>
+      <toplink:password></toplink:password>
+   </toplink:login>
+</toplink:object-persistence>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Component> 
+  <subcomponent name="filExceptionLoggerConfig" class="com.oocl.csc.frm.integration.exception.logger.impl.FWExceptionLoggerSubConfigComponent"> 
+    <!-- File Logger properties -->  
+    <var name="MSG_ID_FILE" value="filMsgId.txt"/>  
+    <var name="MSG_ID_MAX" value="99"/>  
+    <var name="MSG_LOG_DIR" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/exception/"/>  
+    <var name="FILE_LOGGING_ENABLED" value="true"/>  
+    <!-- Data Center Logger properties -->  
+    <var name="DATA_CENTER_LOGGING_ENABLED" value="false"/>  
+    <var name="DATA_CENTER_WS_URL" value=""/>  
+    <var name="DATA_CENTER_WS_USERID" value=""/>  
+    <var name="DATA_CENTER_WS_PASSWORD" value=""/>  
+    <var name="DATA_CENTER_WS_REALM" value=""/>  
+    <!-- Email notification properties -->  
+    <!-- Provide an email notifier config component name here -->  
+    <!-- You need to have appropriate entries for this email notifier in config.xml and componentPackages.xml -->  
+    <!-- Make sure you provide the email configuration file for this email notifier -->  
+    <!-- CONSOLIDATED_EMAIL_NOTIFIER_CONFIG_NAME attribute's value can be blank if there is no consolidated configuration for this email component -->  
+    <var name="CONSOLIDATED_EMAIL_NOTIFIER_CONFIG_NAME" value="filEmailNotifiers"/>  
+    <var name="EMAIL_NOTIFIER_CONFIG_NAME" value="filEmailNotifierConfig"/>  
+    <!-- Specify the comma separated email addresses -->  
+    <var name="RECEPIENT_EMAIL_ADDRESSES" value="gengfo@oocl.com"/>  
+    <!-- Specify the source email address -->  
+    <var name="EMAIL_SOURCE" value="gengfo@oocl.com"/> 
+  </subcomponent> 
+</Component>

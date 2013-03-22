@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<receiver:receiverConfig
+	xmlns:receiver="http://www.oocl.com/frm/mif/receiver"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.oocl.com/frm/mif/receiver mifReceiver.xsd">
+	<!-- messages ***************** start -->
+
+	<receiver:messages>
+
+		<receiver:message type="TruckcoARAPData">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.frm.mif.mf.common.decorator.jaxb.MFToJAXBXmlBeansDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.schema.rs.ips.OrderEntryV1Document" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.OrderEntryV1Convertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.TruckcoARAPDataProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+
+		<receiver:message type="CostProvision">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.frm.mif.mf.common.decorator.jaxb.MFToJAXBXmlBeansDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.schema.rs.ips.OrderFolderV1Document" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.OrderFolderV1Convertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.CostProvisionProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+
+		<receiver:message type="APBillingReport">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.frm.mif.mf.common.decorator.jaxb.MFToJAXBXmlBeansDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.schema.rs.ips.APBillingReportV1Document" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.APBillingReportV1Convertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.APBillingReportProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+		
+		<receiver:message type="ediFBK">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.frm.mif.mf.common.decorator.jaxb.MFToJAXBXmlBeansDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocllogistics.edi.xmlfwk.ack.AckFileRootDocument" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.EdiFeedBackConvertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.EdiFeedBackProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+		
+		<!-- add in R2.5 R2.7-->
+		<receiver:message type="JobCost">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.ivo.webservice.service.message.mif.receiver.MFToJAXBXmlBeanWithHeadersDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.schema.rs.ips.JobOrderEntriesDocument" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.frm.mif.receiver.converter.impl.EmptyReceiverConverter">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.XmlObjectProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>	
+		
+		<!-- add in R2.10 MCCI-->
+		<receiver:message type="MCCIFaxStatus">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.ivo.webservice.service.message.mif.receiver.MFToJAXBXmlBeanWithHeadersDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.schema.ips.mcci.CustomerDeliveryStatusTypeDocument" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.MCCIFaxStatusConvertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.MCCIFaxStatusProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+		
+		<!-- R2.10 -->
+		<receiver:message type="ICSCreateInv">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.ivo.webservice.service.message.mif.receiver.MFToJAXBXmlBeanWithRetryInfosDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.schema.rs.ips.InvoiceListDocument" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.ICSInvoiceV1Convertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.ICSCreateInvProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+		
+		<!-- add in R2.10-->
+		<receiver:message type="ICSCancelInv">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.ivo.webservice.service.message.mif.receiver.MFToJAXBXmlBeanWithRetryInfosDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.schema.rs.ips.CancelMsgDocument" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.ICSInvCancelV1Converter">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.ICSCancelInvProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+		<receiver:message type="SPPMChangeSPNotification">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.frm.mif.mf.common.decorator.jaxb.MFToJAXBXmlBeansDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.ir4.sppm.profile.SupplierNotificationMessage" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.SPPMChangeSPV1Convertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.SPPMChangeSPProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+		
+		<receiver:message type="SPPMChangePayeeNotification">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.frm.mif.mf.common.decorator.jaxb.MFToJAXBXmlBeansDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.ir4.sppm.profile.PayeeNotificationMessage" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.SPPMChangePayeeV1Convertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.SPPMChangePayeeProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+		
+		<!-- in R2.14 -->
+		<receiver:message type="RevenueProvisionMessage">
+			<receiver:version value="ver1.0">
+				<receiver:app receiverId="IPS">
+					<receiver:decorators>
+						<receiver:decorator
+							class="com.oocl.frm.mif.mf.common.decorator.jaxb.MFToJAXBXmlBeansDecorator">
+							<receiver:params>
+								<receiver:param
+									key="xmlDocInterfaceName"
+									value="com.oocl.schema.ips.revprov.RevProvDocument" />
+							</receiver:params>
+						</receiver:decorator>
+					</receiver:decorators>
+					<receiver:converter
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.convertor.RevenueProvisionV1Convertor">
+					</receiver:converter>
+					<receiver:processor
+						class="com.oocl.ivo.webservice.service.message.mif.receiver.processor.RevenueProvisionProcessor">
+					</receiver:processor>
+				</receiver:app>
+			</receiver:version>
+		</receiver:message>
+		
+	</receiver:messages>
+
+
+	<!-- messages ***************** end -->
+
+	<!-- process ***************** start -->
+	<receiver:processes>
+
+		<receiver:process id="RS.IPS.RCV.ARAP_TMS">
+			<receiver:messageType>TruckcoARAPData</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+
+		<receiver:process id="RS.IPS.RCV.COSTPRO_TMS">
+			<receiver:messageType>CostProvision</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+
+		<receiver:process id="RS.IPS.RCV.APBILLRPT_TMS">
+			<receiver:messageType>APBillingReport</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+		
+		<receiver:process id="RS.IPS.RCV.EDIFBK">
+			<receiver:messageType>ediFBK</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+		
+		<!--in R2.5-->			
+		<receiver:process id="RS.IPS.RCV.JOBCOST">
+			<receiver:messageType>JobCost</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>	
+		
+		<!--in R2.10-->	
+		<receiver:process id="MCCI.ASYNC.NM.NOTIFICATIONSTATUS.QUE">
+			<receiver:messageType>MCCIFaxStatus</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+		
+		<!--in R2.10-->			
+		<receiver:process id="RS.IPS.REQUEST.CREATE_INVOICE.QUE">
+			<receiver:messageType>ICSCreateInv</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+		
+		<!--in R2.10-->			
+		<receiver:process id="RS.IPS.REQUEST.CANCEL_INVOICE.QUE">
+			<receiver:messageType>ICSCancelInv</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+		
+		<receiver:process id="IR4.SPPM.SP.IPSCHANGE">
+			<receiver:messageType>SPPMChangeSPNotification</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+		
+		<receiver:process id="IR4.SPPM.PYE.IPSCHANGE">
+			<receiver:messageType>SPPMChangePayeeNotification</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+		
+		<!-- in R2.14 -->
+		<receiver:process id="RS.IPS.REQUEST.REV_PROVISION.QUE">
+			<receiver:messageType>RevenueProvisionMessage</receiver:messageType>
+			<receiver:messageVersion>ver1.0</receiver:messageVersion>
+			<receiver:receiverId>IPS</receiver:receiverId>
+		</receiver:process>
+
+
+	</receiver:processes>
+
+	<!-- process ***************** end -->
+
+</receiver:receiverConfig>

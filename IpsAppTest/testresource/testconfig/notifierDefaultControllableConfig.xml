@@ -1,0 +1,13 @@
+<Component>
+	<var name="SUBJECT" value="Notification" />
+	<var name="SOURCE_ADDRESS" value="forest.geng@oocl.com" />
+	<var name="DEST_ADDRESSES" value="forest.geng@oocl.com" />
+	
+	<!-- ******************************************* -->
+	<!--  acceptable value:none, content, frequency	 -->
+	<!-- ******************************************* -->
+    <var name="CONTROL_STRATEGY" value="frequency" />
+    <var name="MAX_TIME_PERIOD" value="30"/> <!--minute-->
+    <var name="MAX_SENDING" value="5" />
+    <var name="CACHE_NUMBER" value="5" />
+</Component>

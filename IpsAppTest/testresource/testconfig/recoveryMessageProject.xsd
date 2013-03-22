@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- edited by David Ding (OOCL ISDC ShangHai) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:annotation>
+		<xsd:documentation>This is the top element of recoveryMessage.xml</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="recovery-message" type="recoveryMessageType"/>
+	<xsd:complexType name="recoveryMessageType">
+		<xsd:sequence>
+			<xsd:element name="exceptionQueueName" type="xsd:string"/>
+			<xsd:element name="messageID" type="xsd:string"/>
+			<xsd:element name="recoveryAction">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="REMOVE"/>
+						<xsd:enumeration value="RESEND"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="notificationMailAddress" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

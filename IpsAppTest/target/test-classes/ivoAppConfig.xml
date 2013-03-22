@@ -1,0 +1,156 @@
+<Component>
+	<!-- LDAP CONFIGURATION -->
+	<var name="LDAP_PROVIDER_URL" value="ldap://shalxdv1:13060" />
+	<var name="LDAP_SECURITY_AUTH" value="simple" />
+	<var name="LDAP_CTX_FACTORY" value="com.sun.jndi.ldap.LdapCtxFactory" />
+	<var name="LDAP_ADMIN_ID" value="SYSADMIN" />
+	<var name="LDAP_ADMIN_DN" value="cn=IVOUSERS,cn=Users,ou=People,O=oocl" />
+	<var name="LDAP_ADMIN_PWD" value="ivo12345" />
+	<var name="UID" value="cn" />
+	<var name="SEARCH_PATH" value="cn=IVOUSERS,cn=Users,ou=People,O=oocl" />
+	<var name="LDAP_ENV" value="DEV"/>
+	
+	<!-- OOCL LDAP CONFIGURATION -->
+	<var name="OOCL_LDAP_PROVIDER_URL" value="ldap://ldapuat:3892" />
+	<var name="OOCL_LDAP_SECURITY_AUTH" value="simple" />
+	<var name="OOCL_LDAP_CTX_FACTORY" value="com.sun.jndi.ldap.LdapCtxFactory" />
+	<var name="OOCL_LDAP_ADMIN_ID" value="IVOOOCL" />
+	<var name="OOCL_LDAP_ADMIN_DN" value="ou=people,o=oocl" />
+	<var name="OOCL_LDAP_ADMIN_PWD" value="ivooocl1234" />
+	<var name="OOCL_UID" value="uid" />
+	<var name="OOCL_SEARCH_PATH" value="ou=people,o=oocl" />
+
+	<!--Email&SMTP setting-->
+	<!-- act as to address-->
+	<var name="SUPP_EMAIL_IVO" value="matthew.yang@oocl.com;forest.geng@oocl.com" />
+	
+	<!-- penggr-->
+	<var name="SUPP_EMAIL_SPPM" value="yinkan.li@oocl.com" />
+	
+	<!-- act as to from address-->
+	<var name="SUPP_EMAIL_SSC" value="gengfo@oocl.com"/>
+	<!-- SOA email as from address-->
+	<var name="SUPP_EMAIL_INTERNAL_FROM" value="IPSSUPP@oocl.com"/>
+	<var name="EMS_LISTENER_MAIL_TO" value="IPSSUPP@oocl.com;gengfo@exch.oocl.com"/>
+	<var name="SMTP_HOST" value="testsmtp1"/>  
+	<var name="SMTP_PORT" value="25"/>
+    	<var name="EMAIL_ENABLED" value="true"/>      
+    	<var name="CHAR_SET" value="GBK" />
+	<var name="ADAPTER" value="IVO" />
+
+  	<!--Log Config-->
+	<var name="LOG_ROOT_PATH" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/" />
+	<var name="LOG_MODE_SERVER" value="false"/>
+	<var name="LOG_ENABLED" value="true"/>        
+  	
+  	<!--
+  	<var name="DM_PROJECT_CLASSNAME" value="com.oocl.ivo.domain.mapping.IVOProject" />
+  	-->
+  	
+  	<var name="DM_PROJECT_USE_XML" value="false" />  
+  	<var name="DM_SESSION_USE_XML" value="false" />
+  	<var name="DM_SESSION_XML_FILENAME" value="com/oocl/ip/frm/domain/test/xml/sessions.xml" />  
+  	<!--
+  	<var name="DM_PROJECT_JDBCDRIVER" value="oracle.jdbc.driver.OracleDriver" />
+  	<var name="DM_PROJECT_CONSTR" value="jdbc:oracle:thin:@shasudv7:1521:ivodb" />
+  	<var name="DM_PROJECT_PRINCIPLE" value="ivo_aeuser" />
+  	<var name="DM_PROJECT_CREDENTIAL" value="ivoaeuser" /> 
+  
+	<var name="DM_CO_USE_CACHE_COORDINATION" value="false" />
+  	<var name="DM_CO_JNDI_URI" value="ormi://localhost:23791" />
+  	<var name="DM_CO_JNDI_PRINCIPAL" value="admin" />
+  	<var name="DM_CO_JNDI_CREDENTIAL" value="welcome" />
+  	<var name="DM_CO_JNDI_CONTEXT_FACTORY" value="com.evermind.server.rmi.RMIInitialContextFactory" />
+  	<var name="DM_CO_JMS_TOPIC_JNDINAME" value="jms/TopLinkTopic" />
+  	<var name="DM_CO_JMS_TOPICFACTORY_JNDINAME" value="jms/TopLinkTopicConnectionFactory" />
+  	<var name="DM_CO_JMS_TOPICHOST_URI" value="ormi://localhost:23791" />
+  
+  	<var name="DM_SESSION_READ_MIN" value="10" />
+  	<var name="DM_SESSION_READ_MAX" value="10" />
+  	<var name="DM_SESSION_WRITE_MIN" value="10" />
+  	<var name="DM_SESSION_WRITE_MAX" value="10" />
+  	<var name="DM_SESSION_NON_POOL_MAX" value="5" />
+  	-->
+  	
+  	<var name="DM_SESSION_ENABLE_LOG" value="true" />
+  	<var name="DM_SESSION_ENABLE_PROFILE_LOG" value="false" />
+  	<var name="DM_SESSION_ENABLE_EVENT_LOG" value="false" />
+  	
+  	
+  	<!-- Oracle report server configuration --> 
+  	<var name="OR_REPORT_SERVER" value="shasudv7" />  
+  	<var name="OR_REPORT_SERVER_PORT" value="7783" />  
+  	<var name="OR_SERVLET_PATH" value="reports" />  
+  	<var name="OR_SERVLET_NAME" value="rwservlet" />
+  	<var name="OR_DES_FORMAT" value="PDF" />  
+  	<var name="OR_DES_TYPE" value="cache" />  
+  	<var name="OR_RDF_APPLICATION_PREFIX" value="IVO"/>
+  	<var name="OR_RDF_TYPE_INVOICE" value="INV" />
+  	<var name="OR_RDF_TYPE_OFFICIALRECEIPT" value="OR" />
+  	<var name="OR_RDF_FILE_CONCAT" value="_" />
+  	<var name="OR_CONNECTED_DB" value="ivorptdb" />
+  
+  	<var name="RDF_A4_PAGE_HEIGHT" value="2580" />
+  	<var name="RDF_A4_ATTACHMENT_HEIGHT" value="1930" />
+  	<var name="RDF_LETTER_PAGE_HEIGHT" value="2460" />
+  	<var name="RDF_LETTER_ATTACHMENT_HEIGHT" value="1930" />
+  
+  	<!--
+  	<var name="SCHEDULE_DB_DRIVER" value="oracle.jdbc.driver.OracleDriver"/>
+  	<var name="SCHEDULE_DB_CONSTR" value="jdbc:oracle:thin:@shasudv7:1521:ivodb"/>  
+  	<var name="SCHEDULE_DB_PRINCIPLE" value="ivo_aeuser"/>  
+  	<var name="SCHEDULE_DB_CREDENTIAL" value="ivoaeuser"/>
+	-->
+	
+  	<var name="AE_WEBSERVICE_URL" value="http://localhost:8888/IVO_AEServer/IVOWebService" />
+  	<var name="LDAP_ADMIN_TOOL_URL" value="http://hksudv35:8605/LdapAdminTool/LdapAdminToolWS" />
+  	
+  	<var name="CP_DEADLINE_DATE" value="0"/>
+  	<var name="CP_DEADLINE_HOUR" value="0"/> 
+  
+  	<!--SAP configuration-->
+	<!--  	
+  	<var name="SAP_DB_CONSTR" value="jdbc:oracle:thin:@shasudv7:1521:ivodb"/>  
+  	<var name="SAP_DB_PRINCIPLE" value="ivo_aeuser"/>  
+  	<var name="SAP_DB_CREDENTIAL" value="ivoaeuser"/>
+  	-->
+  	<var name="SAP_DB_SCHEMA" value="ivo_aeowner"/>
+  	
+  	<var name="APP_ENV" value="LOCAL"/>
+  	<var name="ART_APP_NAME" value="IPS_LOC"/>
+  	<var name="ART_APP_BK_NAME" value="IPS_BK_LOC"/>
+  	
+  	<var name="NVO_EXT_SOAPURL" value=""/>
+  	<var name="ANZ_EXT_SOAPURL" value="http://zha-cslab07.corp.oocl.com:8888/olll/InvoicePodiumTriggerEventWebService"/>
+  
+  	<!-- ftp realted configuration for edi file transfer -->
+  	<var name="MSGBUS_FTP_HOST" value="shasudv7"/>
+  	<var name="MSGBUS_FTP_PORT" value="21"/>
+  	<var name="MSGBUS_FTP_USER" value="ivodev_oper"/>
+  	<var name="MSGBUS_FTP_PASSWORD" value="dev2006"/>
+  	<var name="MSGBUS_FTP_INVOICE_WORK_PATH_LOUD" value="/export/home/oracle/ias10gR2/IVOAPP/IVODevFtp/ediftproot/out/invoice/loud"/>
+  	<var name="MSGBUS_FTP_INVOICE_WORK_PATH_DISNEY" value="/export/home/oracle/ias10gR2/IVOAPP/IVODevFtp/ediftproot/out/invoice/disney"/>
+  	<var name="MSGBUS_FTP_INVOICE_TEMP_PATH" value="/export/home/oracle/ias10gR2/IVOAPP/IVODevFtp/ediftproot/out/invoice/tmp"/>
+  
+	  <!-- ftp realted configuration for SAP file transfer -->
+  	<var name="SAP_FTP_HOST" value="shasudv7"/>
+  	<var name="SAP_FTP_PORT" value="21"/>
+  	<var name="SAP_FTP_USER" value="ivodev"/>
+  	<var name="SAP_FTP_PASSWORD" value="ivodev"/>
+  	<var name="SAP_FTP_PAYMENT_STATUS_PATH" value="/export/home/ivodevftp/sapftpdev/paymentstatus"/>
+  	<var name="SAP_FTP_PAYMENT_STATUS_BAK_PATH" value="/export/home/ivodevftp/sapftpdev/paymentstatusbak"/>
+  	<var name="MSGBUS_FTP_TAX_INVOICE_WORK_PATH_KORETAX" value="/export/home/oracle/ias10gR2/IVOAPP/IVODevFtp/ediftproot/out/invoice/koretax"/>
+
+  	<var name="INTERFACE_LOG_PATH" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/interface_log"/>
+  	
+  	<var name="MCCI_DM_DOC_ROOT" value=""/>
+  	
+  	<var name="MCCI_DM_URL" value="http://146.222.43.42:9001/MCCI_FWK_DM/Servlet"/>
+  	<var name="MCCI_DM_USER" value="dmuser"/>
+  	<var name="MCCI_DM_PASS" value="dmpwd"/>
+  	
+  	<var name="NEED_VALID_TOKEN" value="true"/>
+  	
+  	<var name="IRIS2_SERVICE_URL" value="http://sjcfsgs1:11181/InvoiceInterface"/>  	
+ 
+</Component>

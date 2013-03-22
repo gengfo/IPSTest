@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'
+	debug="false">
+
+	<appender name="IVOTOPLINKLOGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/toplinkMsg.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILDEFAULTMSGLOGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/defaultMsg.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILDEFAULTDEBUGLOGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/defaultDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="ARTMSGLOGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/art/ARTLogger.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILARTDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/filArtDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILXPMDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/filXpmDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILCONFIGDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/filConfigDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILAUTHDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/filAuthDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILMAILDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/filEmailNotifDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILLOGGINGDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/filLoggingDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/fil/filDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="PICDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/pic/picDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="PICAUDITAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/pic/picAudit.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="TRXMSGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/trx/trxMsg.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="TRXAUDITAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/trx/trxAudit.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="TRXDEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/trx/trxDebug.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="SOALOGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/soa/soaLog.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="SOADEBUGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/soa/soaDebugLog.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="SCHEDULERLOGAPPENDER"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/scheduler/schedulerDebugLog.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="frmAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/frm.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	<!-- TOCOMMNETS for one jvm -->
+	<!--
+	<appender name="frmAppender2"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/frm2.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	-->
+
+	<appender name="serverSqlAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/serverSql.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="odsSqlAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/odsSql.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- TOCOMMNETS for one jvm -->
+	<!--
+	<appender name="serverSqlAppender2"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/serverSql2.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	-->
+	
+	<appender name="devAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/develop.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	<!-- TOCOMMNETS for one jvm -->
+	<!--
+	<appender name="devAppender2"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/develop2.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	-->
+	<appender name="quartzAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/quartz.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="exceptionAppender"
+		class="com.oocl.ivo.frm.webservice.exception.ProcessExceptionAppender">
+		<param name="LogRootPath"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/ivo_internal/exception" />
+		<param name="appendDate" value="false" />
+	</appender>
+
+	
+
+
+	<!-- ================================================================== -->
+	<!-- 					MIF and MF Appenders  Start     -->
+	<!-- ================================================================== -->
+	<appender name="DailyRollingThreadBasedAppender"
+		class="com.oocl.frm.logging.threadbased.DailyRollingThreadBasedFileAppender">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/threadlog/DailyRollingThreadBasedLogger.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	<appender name="mfSenderLoggerAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/mf/mfSender.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="mfReceiverLoggerAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/mf/mfReceiver.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="mfRecoveryLoggerAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/mf/mfRecovery.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="mifSenderAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/mif/mifSender.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	<appender name="mifReceiverAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/mif/mifReceiver.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	<appender name="mifConfigAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/mif/mifConfig.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	<appender name="mifConnectionAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File"
+			value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/mif/mifConnection.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	<appender name="mifCommonAppender"
+		class="org.apache.log4j.DailyRollingFileAppenderVMFix">
+		<param name="File" value="C:/ips_oc4j_101350/j2ee/home/log/ivo_app_log/mif/mifCommon.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-4r [%t] %-5p %c %x %d{DATE} - %m%n" />
+		</layout>
+	</appender>
+	<!-- ================================================================== -->
+	<!-- 					MIF and MF Appenders End        -->
+	<!-- ================================================================== -->
+
+	<!-- ================================================================== -->
+	<!-- 					FIL Logger  Start        -->
+	<!-- ================================================================== -->
+
+	<logger name="ivoToplinkLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="IVOTOPLINKLOGAPPENDER" />
+	</logger>
+
+	<logger name="defaultLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILDEFAULTMSGLOGAPPENDER" />
+	</logger>
+
+	<logger name="defaultDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILDEFAULTDEBUGLOGAPPENDER" />
+	</logger>
+
+	<!-- Define the FIL logger with a daily rolling file appender -->
+	<logger name="filArtDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILARTDEBUGAPPENDER" />
+	</logger>
+
+
+	<!-- Define the FIL logger with a daily rolling file appender -->
+	<logger name="filXpmDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILXPMDEBUGAPPENDER" />
+	</logger>
+
+	<logger name="filConfigDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILCONFIGDEBUGAPPENDER" />
+	</logger>
+
+	<!-- Define the FIL logger with a daily rolling file appender -->
+	<logger name="filAuthDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILAUTHDEBUGAPPENDER" />
+	</logger>
+
+
+	<!-- Define the FIL logger with a daily rolling file appender -->
+	<logger name="filEmailNotifDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILMAILDEBUGAPPENDER" />
+	</logger>
+
+	<!-- Define the FIL logger with a daily rolling file appender -->
+	<logger name="filLoggingDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILLOGGINGDEBUGAPPENDER" />
+	</logger>
+
+
+	<!-- Define the FIL logger with a daily rolling file appender -->
+	<logger name="filDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="FILDEBUGAPPENDER" />
+	</logger>
+
+	<!-- ART Message Logger -->
+	<logger name="artMessageLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="ARTMSGLOGAPPENDER" />
+	</logger>
+
+	<logger name="PICDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="PICDEBUGAPPENDER" />
+	</logger>
+
+	<logger name="PICAuditLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="PICAUDITAPPENDER" />
+	</logger>
+
+	<logger name="trxDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="TRXDEBUGAPPENDER" />
+	</logger>
+
+	<logger name="trxAuditLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="TRXAUDITAPPENDER" />
+	</logger>
+
+	<logger name="trxMsgLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="TRXMSGAPPENDER" />
+	</logger>
+
+	<logger name="soaLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="SOALOGAPPENDER" />
+	</logger>
+
+	<logger name="soaDebugLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="SOADEBUGAPPENDER" />
+	</logger>
+
+	<logger name="schedulerLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="SCHEDULERLOGAPPENDER" />
+	</logger>
+
+	<logger name="com.oocl.ivo.frm.develop" additivity="false">
+		<level value="trace" />
+		<appender-ref ref="devAppender" />
+	</logger>
+	
+	<!-- TOCOMMNETS for one jvm -->
+	<!--
+	<logger name="2.com.oocl.ivo.frm.develop" additivity="false">
+		<level value="trace" />
+		<appender-ref ref="devAppender2" />
+	</logger>
+	-->
+
+	<logger name="oracle.toplink.ServerSession.sql" additivity="true">
+		<level value="%%SQL_LEVEL%%" />
+		<appender-ref ref="serverSqlAppender" />
+	</logger>
+	
+	<logger name="oracle.toplink.ODSSession.sql" additivity="true">
+		<level value="%%SQL_LEVEL%%" />
+		<appender-ref ref="odsSqlAppender" />
+	</logger>
+	
+	<!-- TOCOMMNETS for one jvm -->
+	<!--
+	<logger name="oracle.toplink.ServerSession.sql" additivity="true">
+		<level value="%%SQL_LEVEL%%" />
+		<appender-ref ref="serverSqlAppender" />
+	</logger>
+	-->
+
+	<logger name="com.oocl" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="frmAppender" />
+		<appender-ref ref="exceptionAppender" />
+	</logger>
+	
+	<!-- TOCOMMNETS for one jvm -->
+	<!--
+	<logger name="2.com.oocl" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="frmAppender2" />
+		<appender-ref ref="exceptionAppender" />
+	</logger>
+	-->
+
+	<logger name="org.quartz" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="quartzAppender" />
+	</logger>
+
+	<!-- ================================================================== -->
+	<!-- 					FIL Logger  End        -->
+	<!-- ================================================================== -->
+
+	<!-- ================================================================== -->
+	<!-- 					MIF and MF Logger  Start        -->
+	<!-- ================================================================== -->
+	<logger name="DailyRollingThreadBasedLogger" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="DailyRollingThreadBasedAppender" />
+	</logger>
+	<logger name="mfSenderLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="mfSenderLoggerAppender" />
+	</logger>
+
+	<logger name="mfReceiverLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="mfReceiverLoggerAppender" />
+	</logger>
+
+	<logger name="mfRecoveryLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="mfRecoveryLoggerAppender" />
+	</logger>
+
+	<logger name="mifSenderLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="mifSenderAppender" />
+	</logger>
+	<logger name="mifReceiverLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="mifReceiverAppender" />
+	</logger>
+	<logger name="mifConfigLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="mifConfigAppender" />
+	</logger>
+	<logger name="mifConnectionLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="mifConnectionAppender" />
+	</logger>
+	<logger name="mifCommonLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="mifCommonAppender" />
+	</logger>
+	<!-- ================================================================== -->
+	<!-- 					MIF and MF Logger  End                          -->
+	<!-- ================================================================== -->
+
+</log4j:configuration>

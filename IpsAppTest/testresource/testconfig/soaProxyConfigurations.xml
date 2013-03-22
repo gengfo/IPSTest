@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Component>
+	<subcomponent name="DomainId" class="com.oocl.csc.frm.soa.proxy.config.impl.FWProxyConfigComponent">
+		<var name="DomainId" value="010101010101" />
+	</subcomponent> 
+    
+    <subcomponent name="com.cargosmart.mcci.nm.ws.proxy.NotificationServicePortClientWrapper" 
+	  class="com.oocl.csc.frm.soa.proxy.config.impl.FWProxyConfigComponent">
+		<var name="WEB_SERVICE_URL" value="http://zha-cslab03.corp.oocl.com:9001/MCCI_FWK_NM/NotificationService" /> 
+		<var name="AUTHENTICATION_ENABLED" value="false" /> 
+		<var name="PERFORMANCE_MONITORING_ENABLED" value="true" /> 
+    </subcomponent>
+    
+<subcomponent name="com.oocl.ir4.sppm.profile.supplier.client.SupplierExternalServicePortClientWrapper" 
+	  class="com.oocl.csc.frm.soa.proxy.config.impl.FWProxyConfigComponent">
+		<var name="WEB_SERVICE_URL" value="http://spssppmuat:8403/wls_dom_sppm/SupplierExternalService" /> 
+		<var name="AUTHENTICATION_ENABLED" value="false" /> 
+		<var name="PERFORMANCE_MONITORING_ENABLED" value="true" /> 
+</subcomponent>
+
+<subcomponent name="com.oocl.ir4.sppm.profile.payee.client.PayeeExternalServicePortClientWrapper" 
+	  class="com.oocl.csc.frm.soa.proxy.config.impl.FWProxyConfigComponent">
+		<var name="WEB_SERVICE_URL" value="http://spssppmuat:8403/wls_dom_sppm/PayeeExternalService" /> 
+		<var name="AUTHENTICATION_ENABLED" value="false" /> 
+		<var name="PERFORMANCE_MONITORING_ENABLED" value="true" /> 
+</subcomponent>
+</Component>

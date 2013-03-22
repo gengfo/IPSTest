@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toplink:object-persistence version="Oracle TopLink - 10g Release 3 (10.1.3.1.0) (Build 061004)" xmlns:opm="http://xmlns.oracle.com/ias/xsds/opm" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:toplink="http://xmlns.oracle.com/ias/xsds/toplink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <opm:name>recoveryMessage</opm:name>
+   <opm:class-mapping-descriptors>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.recovery.configuration.jaxb.impl.RecoveryMessageImpl</opm:class>
+         <opm:alias>RecoveryMessageImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_ExceptionQueueName</opm:attribute-name>
+               <opm:get-method>getExceptionQueueName</opm:get-method>
+               <opm:set-method>setExceptionQueueName</opm:set-method>
+               <opm:field name="exceptionQueueName/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_MessageID</opm:attribute-name>
+               <opm:get-method>getMessageID</opm:get-method>
+               <opm:set-method>setMessageID</opm:set-method>
+               <opm:field name="messageID/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_RecoveryAction</opm:attribute-name>
+               <opm:get-method>getRecoveryAction</opm:get-method>
+               <opm:set-method>setRecoveryAction</opm:set-method>
+               <opm:field name="recoveryAction/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_NotificationMailAddress</opm:attribute-name>
+               <opm:get-method>getNotificationMailAddress</opm:get-method>
+               <opm:set-method>setNotificationMailAddress</opm:set-method>
+               <opm:field name="notificationMailAddress/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:default-root-element>recovery-message</toplink:default-root-element>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/recoveryMessageProject.xsd</toplink:resource>
+            <toplink:schema-context>/recovery-message</toplink:schema-context>
+            <toplink:node-type>element</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:xml-class-mapping-descriptor">
+         <opm:class>com.oocl.frm.messaging.recovery.configuration.jaxb.impl.RecoveryMessageTypeImpl</opm:class>
+         <opm:alias>RecoveryMessageTypeImpl</opm:alias>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <opm:attribute-mappings>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_ExceptionQueueName</opm:attribute-name>
+               <opm:get-method>getExceptionQueueName</opm:get-method>
+               <opm:set-method>setExceptionQueueName</opm:set-method>
+               <opm:field name="exceptionQueueName/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_MessageID</opm:attribute-name>
+               <opm:get-method>getMessageID</opm:get-method>
+               <opm:set-method>setMessageID</opm:set-method>
+               <opm:field name="messageID/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_RecoveryAction</opm:attribute-name>
+               <opm:get-method>getRecoveryAction</opm:get-method>
+               <opm:set-method>setRecoveryAction</opm:set-method>
+               <opm:field name="recoveryAction/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+            <opm:attribute-mapping xsi:type="toplink:xml-direct-mapping">
+               <opm:attribute-name>_NotificationMailAddress</opm:attribute-name>
+               <opm:get-method>getNotificationMailAddress</opm:get-method>
+               <opm:set-method>setNotificationMailAddress</opm:set-method>
+               <opm:field name="notificationMailAddress/text()" xsi:type="toplink:node"/>
+            </opm:attribute-mapping>
+         </opm:attribute-mappings>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:change-policy xsi:type="toplink:deferred-detection-change-policy"/>
+         <toplink:namespace-resolver>
+            <toplink:namespaces>
+               <toplink:namespace>
+                  <toplink:prefix>xsd</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema</toplink:namespace-uri>
+               </toplink:namespace>
+               <toplink:namespace>
+                  <toplink:prefix>xsi</toplink:prefix>
+                  <toplink:namespace-uri>http://www.w3.org/2001/XMLSchema-instance</toplink:namespace-uri>
+               </toplink:namespace>
+            </toplink:namespaces>
+         </toplink:namespace-resolver>
+         <toplink:schema xsi:type="toplink:schema-file-reference">
+            <toplink:resource>C:/ips_oc4j_101350/j2ee/home/config/mf_config/recoveryMessageProject.xsd</toplink:resource>
+            <toplink:schema-context>/recoveryMessageType</toplink:schema-context>
+            <toplink:node-type>complex-type</toplink:node-type>
+         </toplink:schema>
+      </opm:class-mapping-descriptor>
+   </opm:class-mapping-descriptors>
+   <toplink:login xsi:type="toplink:xml-login">
+      <toplink:platform-class>oracle.toplink.ox.platform.SAXPlatform</toplink:platform-class>
+      <toplink:user-name></toplink:user-name>
+      <toplink:password></toplink:password>
+   </toplink:login>
+</toplink:object-persistence>

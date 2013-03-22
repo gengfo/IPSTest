@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Component> 
+  <subcomponent name="filEmailNotifierConfig" class="com.oocl.csc.frm.integration.notifier.email.impl.FWEmailNotifierSubConfigComponent"> 
+    <var name="SMTP_HOST" value="testsmtp1"/>  
+    <var name="SMTP_PORT" value="25"/>  
+    <var name="EMAIL_ENABLED" value="true"/>  
+    <var name="AUTO_REDIRECT_EMAIL_ENABLED" value="true"/>  
+    <var name="REDIRECT_EMAIL_ADDRESSES" value="gengfo@oocl.com"/>  
+    <var name="AUTO_BCC_ENABLED" value="false"/>  
+    <var name="BCC_EMAIL_ADDRESSES" value=""/> 
+  </subcomponent> 
+</Component>

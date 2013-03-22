@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<Component>
+  	<subcomponent name="transactionGeneral" class="com.oocl.csc.frm.transaction.configuration.impl.FWTransactionConfigComponent">
+  		<var name="APPLICATION_NAME" value="IVOApplication" />
+		<var name="MSG_LOGGER_NAME" value="trxMsgLogger" />
+		<var name="DEBUG_LOGGER_NAME" value="trxDebugLogger" />
+		<var name="DEBUG_LOGGING_ENABLED" value="true" />
+		<var name="COMMIT_FAILURE_MAX_RETRY_COUNT" value="0" />
+		<var name="COMMIT_FAILURE_RETRY_INTERVAL" value="20" />
+		<var name="AUDIT_REPORT_LOGGING_ENABLED" value="true" />
+		<var name="AUDIT_ENABLED" value="true" />
+		<var name="AUDIT_REPORT_LOGGER_NAME" value="trxAuditLogger" />
+		<var name="AUDIT_REPORT_DATA_CENTER_URL" value="" />
+	</subcomponent>
+
+  	<subcomponent name="trxDebugLogger" class="com.oocl.csc.frm.integration.debug.logger.impl.FWDebugLoggerSubConfigComponent">
+		<var name="LOG_ENABLED" value="true" /> 
+		<var name="LOGGER_CLASS_NAME" value="com.oocl.csc.frm.integration.debug.logger.impl.FWDefaultDebugLogger" /> 
+		<var name="LOGGER_SPECIFIC_PROPERTIES_FILE" value="" /> 
+  	</subcomponent>
+
+	<subcomponent name="trxMsgLogger" class="com.oocl.csc.frm.integration.logger.impl.FWLoggerSubConfigComponent">
+	    	<var name="LOG_ENABLED" value="true" /> 
+		<var name="FORCED_FATAL" value="true" /> 
+		<var name="LOG_ERROR" value="true" /> 
+		<var name="LOG_FATAL" value="true" /> 
+		<var name="LOG_INFO" value="true" /> 
+		<var name="LOG_WARNING" value="true" /> 
+		<var name="LOG_DEBUG" value="true" /> 
+		<var name="LOGGER_SPECIFIC_PROPERTIES_FILE" value="" /> 
+	</subcomponent>
+
+	<subcomponent name="trxAuditLogger" class="com.oocl.csc.frm.integration.logger.impl.FWLoggerSubConfigComponent">
+    		<var name="LOG_ENABLED" value="true" /> 
+		<var name="FORCED_FATAL" value="true" /> 
+		<var name="LOG_ERROR" value="true" /> 
+		<var name="LOG_FATAL" value="true" /> 
+		<var name="LOG_INFO" value="true" /> 
+		<var name="LOG_WARNING" value="true" /> 
+		<var name="LOG_DEBUG" value="true" /> 
+		<var name="LOGGER_SPECIFIC_PROPERTIES_FILE" value="" /> 
+	</subcomponent>
+  	
+  	<subcomponent name="transactionRACException" class="com.oocl.csc.frm.transaction.configuration.impl.FWTransactionExceptionConfigComponent">
+		<!-- count the number of total number error message -->
+		<var name="RAC_ERR_MSG_COUNT" value="1" />
+            	<var name="RAC_ERR_MSG_1" value="javax.jms.JMSException: Failed to connect to any server"/>
+	</subcomponent>
+  	
+</Component>

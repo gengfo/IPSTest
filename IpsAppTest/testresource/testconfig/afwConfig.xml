@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Component> 
+  <subcomponent name="serverConfig" class="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleSubConfigComponent"> 
+    <!-- Server Code -->  
+    <var name="ID" value="AFW"/>  
+    <!-- Server DataSource for Configuration and Token Repository -->  
+    <var name="dataSource" value="jdbc/AFWServerDS"/> 
+  </subcomponent>  
+  <subcomponent name="serverMessageLogger" class="com.oocl.csc.frm.integration.logger.impl.FWLoggerSubConfigComponent"> 
+    <!-- In production set all the properties to false except LOG_ERROR, LOG_FATAL, FORCED_FATAL AND LOG_ENABLED -->  
+    <var name="LOG_ENABLED" value="true"/>  
+    <var name="FORCED_FATAL" value="true"/>  
+    <var name="LOG_ERROR" value="true"/>  
+    <var name="LOG_FATAL" value="true"/>  
+    <var name="LOG_INFO" value="true"/>  
+    <var name="LOG_WARNING" value="true"/>  
+    <var name="LOG_DEBUG" value="true"/>  
+    <var name="LOGGER_SPECIFIC_PROPERTIES_FILE" value=""/> 
+  </subcomponent>  
+  <subcomponent name="serverDebugLogger" class="com.oocl.csc.frm.integration.debug.logger.impl.FWDebugLoggerSubConfigComponent"> 
+    <var name="LOG_ENABLED" value="true"/>  
+    <var name="LOGGER_CLASS_NAME" value="com.oocl.csc.frm.integration.debug.logger.impl.FWDefaultDebugLogger"/>  
+    <var name="LOGGER_SPECIFIC_PROPERTIES_FILE" value=""/> 
+  </subcomponent>  
+  <subcomponent name="adaptorDebugLogger" class="com.oocl.csc.frm.integration.debug.logger.impl.FWDebugLoggerSubConfigComponent"> 
+    <var name="LOG_ENABLED" value="true"/>  
+    <var name="LOGGER_CLASS_NAME" value="com.oocl.csc.frm.integration.debug.logger.impl.FWDefaultDebugLogger"/>  
+    <var name="LOGGER_SPECIFIC_PROPERTIES_FILE" value=""/> 
+  </subcomponent>  
+  <subcomponent name="serverEmailNotifierConfig" class="com.oocl.csc.frm.integration.notifier.email.impl.FWEmailNotifierSubConfigComponent"> 
+    <!--Modify the SMTP_HOST value accordingly 146.222.121.229 is production host-->  
+    <var name="SMTP_HOST" value="testsmtp1"/>  
+    <var name="SMTP_PORT" value="25"/>  
+    <var name="EMAIL_ENABLED" value="true"/>  
+    <var name="AUTO_REDIRECT_EMAIL_ENABLED" value="false"/>  
+    <var name="REDIRECT_EMAIL_ADDRESSES" value=""/>  
+    <var name="AUTO_BCC_ENABLED" value="false"/>  
+    <var name="BCC_EMAIL_ADDRESSES" value=""/> 
+  </subcomponent> 
+</Component>

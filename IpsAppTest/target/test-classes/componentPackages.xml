@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Component>
+	<!-- FIL Configuration Files -->
+	<var name="mfLoggers" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>
+	<var name="mifLoggers" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent" />
+	<var name="notifierDefaultControllableConfig" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent" />
+	
+	<var name="filDebugLoggers" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/> 
+	<var name="filMessageLoggers" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/> 
+	<var name="filConfigurations" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/> 
+	<var name="filEmailNotifiers" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/> 
+	<var name="filExceptionLoggers" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>
+        <var name="afwConfig" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/> 
+          	
+	<!-- ART Configuration File -->
+	<var name="artConfig" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>		
+	
+	<!--config components for SOA framework -->
+    	<var name="soaServiceConfigurations" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent" />         
+    	<var name="soaLoggerConfigurations" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent" />   
+    	<var name="soaServiceAuditRecordConfigurations" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent" />
+    	<var name="soaProxyConfigurations" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent" />         
+        
+	<!-- Persistence Interface Component Configuration --> 
+    	<var name="PICConfig" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>    
+
+    	<!-- Transaction Framework Configuration -->
+    	<var name="transactionConfig" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>						
+    
+    	<var name="xpmConfig" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>
+    	<var name="ivoAppConfig" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>
+    	<var name="ivoToplinkLogger" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>
+    
+    	<var name="schedulerConfig" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>
+    	<var name="schedulerLogger" value="com.oocl.csc.frm.integration.configurator.impl.FWBaseSimpleConfigComponent"/>      
+</Component>
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEANS//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="modulePool" class="com.oocl.frm.core.module.ModulePool">
+		<property name="modules">
+			<map>
+				<entry key="core" value-ref="core" />
+				<entry key="concurrent" value-ref="concurrent" />
+				<entry key="transaction" value-ref="transaction" />
+				<!--
+				<entry key="scheduler" value-ref="scheduler" />
+				-->
+				<entry key="console" value-ref="console" />
+				<entry key="domain" value-ref="domain" />
+				<!--
+				<entry key="mif" value-ref="mif" />
+				-->
+				
+				<entry key="ws" value-ref="ws" />
+			</map>
+		</property>
+	</bean>
+	<bean id="core" class="com.oocl.frm.core.CoreModule" />
+	<bean id="concurrent" class="com.oocl.frm.concurrent.ConcurrentModule">
+		<property name="depends">
+			<list>
+				<ref bean="core" />
+			</list>
+		</property>
+	</bean>
+	<bean id="transaction" class="com.oocl.frm.transaction.TransactionModule">
+		<property name="depends">
+			<list>
+				<ref bean="core" />
+			</list>
+		</property>
+	</bean>
+	<!--
+	<bean id="scheduler" class="com.oocl.frm.schedule.ScheduleModule">
+		<property name="depends">
+			<list>
+				<ref bean="core" />
+			</list>
+		</property>
+	</bean>
+	-->
+	<bean id="console" class="com.oocl.frm.console.ConsoleModule">
+		<property name="depends">
+			<list>
+				<ref bean="core" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="domain" class="com.oocl.ivo.domain.DomainModule">
+		<property name="depends">
+			<list>
+				<ref bean="core" />
+				<ref bean="transaction" />
+				<!--
+				<ref bean="scheduler" />
+				-->
+			</list>
+		</property>
+	</bean>
+	<!--
+	<bean id="mif" class="com.oocl.ivo.webservice.service.message.mif.MIFModule">
+		<property name="depends">
+			<list>
+				<ref bean="domain" />
+			</list>
+		</property>
+	</bean>
+	-->
+	<bean id="ws" class="com.oocl.ivo.webservice.WebServiceModule">
+		<property name="depends">
+			<list>
+				<ref bean="core" />
+				<ref bean="domain" />
+			</list>
+		</property>
+	</bean>
+</beans>
