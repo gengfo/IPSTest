@@ -6,10 +6,10 @@
 		<artifactId>IVO</artifactId>
 		<version>2.9-SNAPSHOT</version>
 	</parent>
-	<artifactId>IpsAppTest</artifactId>
+	<artifactId>IpsExtWsTest</artifactId>
 	<packaging>jar</packaging>
 	<version>2.9-SNAPSHOT</version>
-	<name>IpsAppTestn</name>
+	<name>IpsExtWsTestn</name>
 	<build>
 		<directory>${project.basedir}/target
 		</directory>
@@ -36,19 +36,6 @@
 		</testSourceDirectory>
 
 		<testResources>
-			<!-- <testResource> <directory>C:\ips_oc4j_101350\j2ee\home\config\fil_config</directory> 
-				<includes> <include>**/*.load</include> <include>**/*.unload</include> <include>**/*.txt</include> 
-				<include>**/*.htm</include> <include>**/*.properties</include> <include>**/*.xml</include> 
-				<include>**/*.dtd</include> <include>**/*.sql</include> </includes> </testResource> 
-				<testResource> <directory>C:\ips_oc4j_101350\j2ee\home\config\mf_config</directory> 
-				<includes> <include>**/*.load</include> <include>**/*.unload</include> <include>**/*.txt</include> 
-				<include>**/*.htm</include> <include>**/*.properties</include> <include>**/*.xml</include> 
-				<include>**/*.dtd</include> <include>**/*.sql</include> </includes> </testResource> 
-				<testResource> <directory>C:/ips_oc4j_101350/j2ee/home/config/mif_config</directory> 
-				<includes> <include>**/*.load</include> <include>**/*.unload</include> <include>**/*.txt</include> 
-				<include>**/*.htm</include> <include>**/*.properties</include> <include>**/*.xml</include> 
-				<include>**/*.dtd</include> <include>**/*.sql</include> </includes> </testResource> -->
-
 			<testResource>
 				<directory>${project.basedir}/test</directory>
 				<includes>
@@ -128,25 +115,6 @@
 
 	<dependencies>
 
-		<dependency>
-			<groupId>com.oocl.ivo</groupId>
-			<artifactId>IVOFramework</artifactId>
-			<version>2.9-SNAPSHOT</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.oocl.ivo</groupId>
-			<artifactId>IVODomain</artifactId>
-			<version>2.9-SNAPSHOT</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.oocl.ivo</groupId>
-			<artifactId>IVOWebService</artifactId>
-			<version>2.9-SNAPSHOT</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.dbunit</groupId>
