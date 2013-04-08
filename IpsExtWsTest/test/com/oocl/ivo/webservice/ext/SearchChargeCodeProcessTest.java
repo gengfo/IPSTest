@@ -19,10 +19,10 @@ public class SearchChargeCodeProcessTest extends TestCase {
         inputDto.setBizGroupCode("OPS");
 
         // sit
-        proxy._setSoapURL("http://ipssitweb:8607/IVO_AEServer/IVOExternalWebService");
+        //proxy._setSoapURL("http://ipssitweb:8607/IVO_AEServer/IVOExternalWebService");
 
         // localhost
-        //proxy._setSoapURL("http://localhost:8888/IVO_AEServer/IVOExternalWebService");
+        proxy._setSoapURL("http://localhost:8888/IVO_AEServer/IVOExternalWebService");
 
         com_oocl_ivo_webservice_dto_interfaces_charge_SearchChargeCodeResultDTO resultDto = null;
         try {
