@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<Component> 
-  <subcomponent name="soaExternalWebServiceConfig" class="com.oocl.csc.frm.bsf.service.policy.impl.FWRequestExecutionPolicyConfigComponent"> 
-    <var name="ART_REQUIRED" value="true" readonly="true"/>  
-    <var name="AUTHENTICATION_REQUIRED" value="true" readonly="true"/>  
-    <var name="DISABLE_SERVICES" value=""/> 
-  </subcomponent> 
-</Component>
